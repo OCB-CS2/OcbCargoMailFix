@@ -21,6 +21,11 @@ Additionally 20% of post trucks from sorting facilities get converted
 to post vans. This will allow the sorting facility to also gather and
 deliver some of the local mail directly from/to end-customers.
 
+[![GitHub CI Compile Status][2]][1]
+
+[1]: https://github.com/OCB-CS2/OcbCargoMailFix/actions/workflows/ci.yml
+[2]: https://github.com/OCB-CS2/OcbCargoMailFix/actions/workflows/ci.yml/badge.svg
+
 ## How to install
 
 Install like any other BepInEx mod into the
@@ -32,7 +37,10 @@ Please don't distribute release files to other mirror sites.
 Official downloads can always be found at nexus mods or on GitHub.
 Please always link back to the original sources. Thanks!
 
-https://www.nexusmods.com/citiesskylines2/mods/102
-https://github.com/OCB-CS2/OcbCargoMailFix/releases
+- https://www.nexusmods.com/citiesskylines2/mods/102
+- https://github.com/OCB-CS2/OcbCargoMailFix/releases
 
-Paypal Donations always welcome at donations@ocbnet.ch ;)
+Paypal Donations always welcome at [donations@ocbnet.ch][3] ;)
+
+[3]: https://www.paypal.com/donate/?business=donations@ocbnet.ch
+
