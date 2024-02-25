@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <PATH_SC2_MANAGED Condition=" '$(PATH_SC2_MANAGED)' == '' ">..\..\Cities2_Data\Managed</PATH_SC2_MANAGED>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <BaseIntermediateOutputPath>build\obj\$(AssemblyName)</BaseIntermediateOutputPath>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4235F8EA-1B03-471D-A4E0-F7935BA2A2A2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OcbCargoMailFix</RootNamespace>
+    <AssemblyName>OcbCargoMailFix</AssemblyName>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>build\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PostBuildEvent>
+      copy /Y /B "$(AssemblyName).dll" "..\..\..\$(AssemblyName).dll"
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>build\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PostBuildEvent>
+      copy /Y /B "$(AssemblyName).dll" "..\..\..\$(AssemblyName).dll"
+    </PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>$(PATH_SC2_MANAGED)\..\..\BepInEx\core\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="HarmonyXInterop">
+      <HintPath>$(PATH_SC2_MANAGED)\..\..\BepInEx\core\HarmonyXInterop.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>$(PATH_SC2_MANAGED)\..\..\BepInEx\core\BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Harmony">
+      <HintPath>$(PATH_SC2_MANAGED)\..\..\BepInEx\core\BepInEx.Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Game">
+      <HintPath>$(PATH_SC2_MANAGED)\Game.dll</HintPath>
+    </Reference>
+    <Reference Include="Colossal.Core">
+      <HintPath>$(PATH_SC2_MANAGED)\Colossal.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Colossal.Mathematics">
+      <HintPath>$(PATH_SC2_MANAGED)\Colossal.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst">
+      <HintPath>$(PATH_SC2_MANAGED)\Unity.Burst.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Compile">
+      <HintPath>$(PATH_SC2_MANAGED)\Unity.Burst.Compile.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Intrinsics">
+      <HintPath>$(PATH_SC2_MANAGED)\Unity.Burst.Intrinsics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Collections">
+      <HintPath>$(PATH_SC2_MANAGED)\Unity.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Entities">
+      <HintPath>$(PATH_SC2_MANAGED)\Unity.Entites.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Jobs">
+      <HintPath>$(PATH_SC2_MANAGED)\Unity.Jobs.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>$(PATH_SC2_MANAGED)\Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>$(PATH_SC2_MANAGED)\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>$(PATH_SC2_MANAGED)\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>$(PATH_SC2_MANAGED)\System.Xml.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <HintPath>$(PATH_SC2_MANAGED)\System.Data.DataSetExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>$(PATH_SC2_MANAGED)\System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>$(PATH_SC2_MANAGED)\System.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Entities">
+      <HintPath>$(PATH_SC2_MANAGED)\Unity.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(PATH_SC2_MANAGED)\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>$(PATH_SC2_MANAGED)\UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>$(PATH_SC2_MANAGED)\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>$(PATH_SC2_MANAGED)\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(PATH_SC2_MANAGED)\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>$(PATH_SC2_MANAGED)\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Harmony\OcbCargoMailFix.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
